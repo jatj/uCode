@@ -1,4 +1,6 @@
+// Carga jQuery
 window.$ = window.jQuery = require('jquery');
+// Carga los modules a utilizar
 const {remote} = require('electron')
 const {Menu, MenuItem} = remote
 const Window = require('electron').remote.getCurrentWindow()
@@ -9,9 +11,11 @@ const fs = require('fs');
 // IPC module
 const { ipcRenderer } = require('electron');
 
+// Configuración default del editor en lenguaje y tema
 const DEFAULT_MODE = "ace/mode/javascript"
 const DEFAULT_THEME = "ace/theme/monokai"
 
+// Evento cuando la página esta lista
 $(()=>{
 	var modeOptions = [];
 	var themeOptions = [];
@@ -166,7 +170,7 @@ $(()=>{
 	  			{
 	  				label: 'Más información',
 	  				click(){
-	  					electron.shell.openExternal('https://github.com/jatj/uCode');
+	  					remote.shell.openExternal('https://github.com/jatj/uCode');
 	  				}
 	  			}
 	  		]
