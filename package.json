@@ -1,0 +1,46 @@
+{
+  "name": "ucode",
+  "productName": "Ucode",
+  "version": "0.0.0",
+  "description": "A code editor using Electron",
+  "license": "MIT",
+  "repository": "jatj/ucode",
+  "author": {
+    "name": "jatj",
+    "email": "abraham-tj_ja@hotmail.com",
+    "url": "github.com/jatj"
+  },
+  "scripts": {
+    "test": "xo",
+    "start": "electron .",
+    "build": "electron-packager . --out=dist --asar --overwrite --all"
+  },
+  "files": [
+    "index.js",
+    "index.html",
+    "index.css"
+  ],
+  "keywords": [
+    "electron-app",
+    "electron"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "electron-debug": "^1.0.0",
+    "electron-tabs": "^0.9.0",
+    "jquery": "^3.2.1"
+  },
+  "devDependencies": {
+    "devtron": "^1.1.0",
+    "electron-packager": "^8.0.0",
+    "electron": "^1.7.9",
+    "xo": "^0.16.0"
+  },
+  "xo": {
+    "esnext": true,
+    "envs": [
+      "node",
+      "browser"
+    ]
+  }
+}

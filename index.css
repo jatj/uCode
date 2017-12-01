@@ -1,0 +1,24 @@
+html,
+body {
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	font-family: -apple-system, 'Helvetica Neue', Helvetica, sans-serif;
+}
+
+.editor { 
+  position: fixed !important;
+  right: 0;
+  left: 0;
+  width: 100%;
+  height: calc(100% - 42px);
+}
+
+.delete {
+	cursor:pointer;
+}
+.delete:hover{
+	color:grey;
+}
