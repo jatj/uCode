@@ -3,11 +3,16 @@ body {
 	padding: 0;
 	margin: 0;
 }
-
 body {
 	font-family: -apple-system, 'Helvetica Neue', Helvetica, sans-serif;
 }
-
+a{
+	color:white;
+}
+.container-fluid{
+	min-height: 100vh;
+	background-color: #3EB2BF;
+}
 .editor { 
   position: fixed !important;
   right: 0;
@@ -15,7 +20,6 @@ body {
   width: 100%;
   height: calc(100% - 42px);
 }
-
 .delete {
 	cursor:pointer;
 }

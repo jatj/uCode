@@ -16,12 +16,12 @@ const {ipcMain} = require('electron')
 // Path module para los directorios de archivos
 var path = require('path')
 
-// Almacenara la ventana principal del proyecto
+// Almacenara las ventanas abiertas de la aplicación
 let windows = [];
 // Almacenan las propiedades de la pantalla
-let screen = null;
-let display = null;
-let area = null;
+let screen;
+let display;
+let area;
 
 // Función que se ejecutara cuando la ventana es cerrada
 function onClosed(index) {
@@ -32,7 +32,7 @@ function onClosed(index) {
 
 // Función de retorno que se ejecuta cuando la aplicación esta lista
 function createWindow(index) {
-	// Inicializa una nueva ventana con un tamaño de 600 x 400
+	// Inicializa una nueva ventana
 	const win = new electron.BrowserWindow({
 		width: area.width,
 		height: area.height,
@@ -79,7 +79,7 @@ app.on('ready', () => {
 	windows.push(createWindow(windows.length));
 });
 
-// Evento que escucha los eventos de los editores de crear nueva netnana
+// // Evento que escucha los eventos de los editores de crear nueva ventana
 ipcMain.on('newWindow', (event, msg) => {
   createWindow(windows.length);
 });
